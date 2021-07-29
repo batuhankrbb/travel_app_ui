@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:travel_app_ui/extensions/context_extension.dart';
 import 'dart:math';
 
+import 'package:travel_app_ui/fake_data.dart';
+
 class CategoryCell extends StatelessWidget {
-  const CategoryCell({Key? key}) : super(key: key);
+   CategoryCell({Key? key, required this.category}) : super(key: key);
+
+  Category category;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class CategoryCell extends StatelessWidget {
           ),
           Expanded(
             flex: 10,
-            child: buildText(),
+            child: buildText(category),
           )
         ],
       ),
@@ -34,7 +38,7 @@ class CategoryCell extends StatelessWidget {
         color: Colors.grey[300],
       ),
       child: Image.asset(
-        "assets/images/mountain.png",
+        category.photo,
         fit: BoxFit.scaleDown,
       ),
       width: context.getWidth(0.2),
@@ -43,11 +47,12 @@ class CategoryCell extends StatelessWidget {
   }
 }
 
-Widget buildText() {
+Widget buildText(Category category) {
+
   return Padding(
     padding: EdgeInsets.only(top: 2),
     child: AutoSizeText(
-      "Mountain",
+      category.name,
       style: TextStyle(
           color: Colors.black, fontWeight: FontWeight.w600, fontSize: 30),
     ),

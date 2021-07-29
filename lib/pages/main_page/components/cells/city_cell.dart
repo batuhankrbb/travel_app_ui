@@ -1,13 +1,16 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app_ui/extensions/context_extension.dart';
+import 'package:travel_app_ui/fake_data.dart';
 import 'package:travel_app_ui/pages/main_page/components/like_button.dart';
 
 class CityCell extends StatefulWidget {
-  CityCell({Key? key}) : super(key: key);
+  CityCell({Key? key, required this.place}) : super(key: key);
 
   @override
   _CityCellState createState() => _CityCellState();
+
+  Place place;
 }
 
 class _CityCellState extends State<CityCell> {
@@ -55,7 +58,7 @@ class _CityCellState extends State<CityCell> {
         children: [
           Positioned.fill(
             child: Image.asset(
-              "assets/images/colesseum.jpg",
+              widget.place.photo,
               fit: BoxFit.fill,
             ),
           ),
@@ -84,7 +87,7 @@ class _CityCellState extends State<CityCell> {
     return Padding(
       padding: EdgeInsets.all(3),
       child: AutoSizeText(
-        "Colosseum",
+        widget.place.name,
         style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
@@ -116,7 +119,7 @@ class _CityCellState extends State<CityCell> {
           Expanded(
             flex: 25,
             child: AutoSizeText(
-              "Rome",
+              widget.place.country,
               style: TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.w500,

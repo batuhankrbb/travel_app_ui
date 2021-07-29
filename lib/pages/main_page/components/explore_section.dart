@@ -55,7 +55,7 @@ class _ExploreSectionState extends State<ExploreSection> {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return CityCategoryCell(
-          text: categories[index],
+          text: cityCategories[index],
           isSelected: selectedIndex == index,
           onTap: () {
             setState(() {
@@ -69,7 +69,7 @@ class _ExploreSectionState extends State<ExploreSection> {
           width: 20,
         );
       },
-      itemCount: categories.length,
+      itemCount: cityCategories.length,
     );
   }
 
@@ -81,10 +81,10 @@ class _ExploreSectionState extends State<ExploreSection> {
           padding: EdgeInsets.symmetric(
             horizontal: 8,
           ),
-          child: CityCell(),
+          child: CityCell(place: places[index],),
         );
       },
-      itemCount: 10,
+      itemCount: places.length,
     );
   }
 }
