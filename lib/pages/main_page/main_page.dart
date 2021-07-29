@@ -22,7 +22,7 @@ class _MainPageState extends State<MainPage> {
               flex: 2,
             ),
             Expanded(
-              flex: 8,
+              flex: 7,
               child: ProfileHeader(),
             ),
             Spacer(
