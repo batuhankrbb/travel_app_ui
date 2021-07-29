@@ -1,9 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/extensions/context_extension.dart';
+import '../../../../extensions/context_extension.dart';
 import 'dart:math';
 
-import 'package:travel_app_ui/fake_data.dart';
+import '../../../../fake_data.dart';
 
 class CategoryCell extends StatelessWidget {
    CategoryCell({Key? key, required this.category}) : super(key: key);

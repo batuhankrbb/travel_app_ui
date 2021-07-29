@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/extensions/context_extension.dart';
+import '../../../extensions/context_extension.dart';
 
 class CustomTextField extends StatefulWidget {
   CustomTextField({Key? key}) : super(key: key);

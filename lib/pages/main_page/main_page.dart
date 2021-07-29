@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/pages/main_page/components/categories_section.dart';
-import 'package:travel_app_ui/pages/main_page/components/custom_textfield.dart';
-import 'package:travel_app_ui/pages/main_page/components/explore_section.dart';
-import 'package:travel_app_ui/pages/main_page/components/profile_header.dart';
-import 'package:travel_app_ui/extensions/context_extension.dart';
+import 'components/categories_section.dart';
+import 'components/custom_textfield.dart';
+import 'components/explore_section.dart';
+import 'components/profile_header.dart';
+import '../../extensions/context_extension.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);

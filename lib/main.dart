@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_app_ui/pages/main_page/main_page.dart';
+import 'pages/main_page/main_page.dart';
 
 void main() {
   runApp(DevicePreview(enabled: !kReleaseMode, builder: (_) => MyApp()));
