@@ -8,7 +8,7 @@ class ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      padding: EdgeInsets.only(top: 4, bottom: 4),
       child: Row(
         children: [
           Expanded(
