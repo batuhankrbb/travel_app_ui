@@ -27,7 +27,7 @@ class _MainPageState extends State<MainPage> {
                 child: buildTopSection(),
               ),
               Expanded(
-                flex: 25,
+                flex: 26,
                 child: ExploreSection(),
               ),
               Spacer(
