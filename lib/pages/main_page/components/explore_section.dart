@@ -3,10 +3,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app_ui/fake_data.dart';
 import 'package:travel_app_ui/extensions/context_extension.dart';
-import 'package:travel_app_ui/pages/main_page/components/city_category_cell.dart';
+import 'package:travel_app_ui/pages/main_page/components/cells/city_category_cell.dart';
 import 'dart:math';
 
-import 'package:travel_app_ui/pages/main_page/components/city_cell.dart';
+import 'package:travel_app_ui/pages/main_page/components/cells/city_cell.dart';
 
 class ExploreSection extends StatefulWidget {
   ExploreSection({Key? key}) : super(key: key);

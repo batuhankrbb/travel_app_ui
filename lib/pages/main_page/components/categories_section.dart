@@ -1,4 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui/pages/main_page/components/cells/category_cell.dart';
+import 'package:travel_app_ui/extensions/context_extension.dart';
 
 class CategoriesSection extends StatefulWidget {
   CategoriesSection({Key? key}) : super(key: key);
@@ -12,14 +15,62 @@ class _CategoriesSectionState extends State<CategoriesSection> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Text(
-        "Categories Section",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 5,
+            child: buildCategoriesText(),
+          ),
+          Spacer(
+            flex: 2,
+          ),
+          Expanded(
+            flex: 10,
+            child: buildCategoriesListView(),
+          ),
+        ],
       ),
-      color: Colors.purple[200],
     );
   }
+
+  Widget buildCategoriesText() {
+    return Container(
+      alignment: Alignment.centerLeft,
+      child: AutoSizeText(
+        "Categories",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 30,
+        ),
+        textAlign: TextAlign.start,
+      ),
+    );
+  }
+
+  Widget buildCategoriesListView() {
+    return ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return CategoryCell();
+        },
+        separatorBuilder: (_, __) {
+          return SizedBox(
+            width: context.getWidth(0.05),
+          );
+        },
+        itemCount: 10);
+  }
 }
+
+/*
+AutoSizeText(
+            "Categories",
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              
+            ),
+          )
+*/

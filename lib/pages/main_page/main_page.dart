@@ -21,7 +21,6 @@ class _MainPageState extends State<MainPage> {
           padding: EdgeInsets.only(left: context.getWidth(0.06)),
           child: Column(
             children: [
-              //* üst ve alt bölüm olarak metodlara bölüp ona göre padding ver.
               Expanded(
                 flex: 21,
                 child: buildTopSection(),
@@ -34,7 +33,7 @@ class _MainPageState extends State<MainPage> {
                 flex: 2,
               ),
               Expanded(
-                flex: 10,
+                flex: 11,
                 child: CategoriesSection(),
               ),
               Spacer(
