@@ -4,7 +4,9 @@ Responsive app design with Flutter.
 
 ## Keep in mind
 
-This project is focused on user interface. There is nothing about business logic.
+This project is focused on user interface. There is nothing about business logic. As you see on the video below, this app is has a responsive design.
+
+Compatible devices: iPad, iPhone, Android Tablets, Android Phones, Small Screens
 
 
 
